@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% for diary in diarys %}
+<div class="post block">
+    <h2 class="subtitle">{{diary.title}}</h2>
+    <small>Posted at {{diary.created_date}}</small>
+    <ht />
+    <p>{{diary.content}}</p>
+</div>
+{% endfor %}
+<div class="create">
+    <a href="{% url 'create_diary' %}">今日の出来事を記録</a>
+</div>
+{%endblock%}
